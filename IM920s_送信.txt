@@ -1,0 +1,17 @@
+#include <SoftwareSerial.h>
+
+SoftwareSerial IM920Serial(8, 9);    // RX, TX
+
+void setup() {
+  IM920Serial.begin(19200);
+
+  pinMode(10, INPUT);
+}
+
+void loop() {
+  if
+  (digitalRead(10) == LOW)
+  {
+    IM920Serial.println("TXDU0002,hello");      
+  }
+}
